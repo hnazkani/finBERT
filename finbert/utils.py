@@ -66,7 +66,7 @@ class DataProcessor(object):
     @classmethod
     def _read_tsv(cls, input_file):
         """Reads a tab separated value file."""
-        with open(input_file, "r") as f:
+        with open(input_file, "r", encoding='utf-8') as f:
             reader = csv.reader(f, delimiter="\t")
             lines = []
             for line in reader:
